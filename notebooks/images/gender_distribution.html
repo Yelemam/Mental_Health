@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bokeh Plot</title>
+    <style>
+      html, body {
+        box-sizing: border-box;
+        display: flow-root;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script type="text/javascript" src="https://cdn.bokeh.org/bokeh/release/bokeh-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        Bokeh.set_log_level("info");
+    </script>
+  </head>
+  <body>
+    <div id="bc554201-f433-4281-9ee2-9ab6167e3986" data-root-id="p1220" style="display: contents;"></div>
+  
+    <script type="application/json" id="dc5d53e6-30ca-477c-8254-bfc53a281575">
+      {"23c4833b-0a9b-451d-95b1-810911aa3b28":{"version":"3.4.1","title":"Bokeh Application","roots":[{"type":"object","name":"Figure","id":"p1220","attributes":{"height":350,"x_range":{"type":"object","name":"FactorRange","id":"p1230","attributes":{"factors":["male","female"]}},"y_range":{"type":"object","name":"DataRange1d","id":"p1222","attributes":{"start":0}},"x_scale":{"type":"object","name":"CategoricalScale","id":"p1231"},"y_scale":{"type":"object","name":"LinearScale","id":"p1232"},"title":{"type":"object","name":"Title","id":"p1223","attributes":{"text":"Distribution of Gender"}},"renderers":[{"type":"object","name":"GlyphRenderer","id":"p1249","attributes":{"data_source":{"type":"object","name":"ColumnDataSource","id":"p1217","attributes":{"selected":{"type":"object","name":"Selection","id":"p1218","attributes":{"indices":[],"line_indices":[]}},"selection_policy":{"type":"object","name":"UnionRenderers","id":"p1219"},"data":{"type":"map","entries":[["categories",["male","female"]],["counts",[237900,52151]],["color",["#1f77b4","#ff7f0e"]]]}}},"view":{"type":"object","name":"CDSView","id":"p1250","attributes":{"filter":{"type":"object","name":"AllIndices","id":"p1251"}}},"glyph":{"type":"object","name":"VBar","id":"p1246","attributes":{"x":{"type":"field","field":"categories"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"counts"},"line_color":{"type":"field","field":"color"},"fill_color":{"type":"field","field":"color"},"hatch_color":{"type":"field","field":"color"}}},"nonselection_glyph":{"type":"object","name":"VBar","id":"p1247","attributes":{"x":{"type":"field","field":"categories"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"counts"},"line_color":{"type":"field","field":"color"},"line_alpha":{"type":"value","value":0.1},"fill_color":{"type":"field","field":"color"},"fill_alpha":{"type":"value","value":0.1},"hatch_color":{"type":"field","field":"color"},"hatch_alpha":{"type":"value","value":0.1}}},"muted_glyph":{"type":"object","name":"VBar","id":"p1248","attributes":{"x":{"type":"field","field":"categories"},"width":{"type":"value","value":0.5},"top":{"type":"field","field":"counts"},"line_color":{"type":"field","field":"color"},"line_alpha":{"type":"value","value":0.2},"fill_color":{"type":"field","field":"color"},"fill_alpha":{"type":"value","value":0.2},"hatch_color":{"type":"field","field":"color"},"hatch_alpha":{"type":"value","value":0.2}}}}}],"toolbar":{"type":"object","name":"Toolbar","id":"p1229"},"toolbar_location":null,"left":[{"type":"object","name":"LinearAxis","id":"p1238","attributes":{"ticker":{"type":"object","name":"BasicTicker","id":"p1239","attributes":{"mantissas":[1,2,5]}},"formatter":{"type":"object","name":"BasicTickFormatter","id":"p1240"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1241"}}}],"below":[{"type":"object","name":"CategoricalAxis","id":"p1233","attributes":{"ticker":{"type":"object","name":"CategoricalTicker","id":"p1234"},"formatter":{"type":"object","name":"CategoricalTickFormatter","id":"p1235"},"major_label_policy":{"type":"object","name":"AllLabels","id":"p1236"}}}],"center":[{"type":"object","name":"Grid","id":"p1237","attributes":{"axis":{"id":"p1233"},"grid_line_color":null}},{"type":"object","name":"Grid","id":"p1242","attributes":{"dimension":1,"axis":{"id":"p1238"}}}]}}]}}
+    </script>
+    <script type="text/javascript">
+      (function() {
+        const fn = function() {
+          Bokeh.safely(function() {
+            (function(root) {
+              function embed_document(root) {
+              const docs_json = document.getElementById('dc5d53e6-30ca-477c-8254-bfc53a281575').textContent;
+              const render_items = [{"docid":"23c4833b-0a9b-451d-95b1-810911aa3b28","roots":{"p1220":"bc554201-f433-4281-9ee2-9ab6167e3986"},"root_ids":["p1220"]}];
+              root.Bokeh.embed.embed_items(docs_json, render_items);
+              }
+              if (root.Bokeh !== undefined) {
+                embed_document(root);
+              } else {
+                let attempts = 0;
+                const timer = setInterval(function(root) {
+                  if (root.Bokeh !== undefined) {
+                    clearInterval(timer);
+                    embed_document(root);
+                  } else {
+                    attempts++;
+                    if (attempts > 100) {
+                      clearInterval(timer);
+                      console.log("Bokeh: ERROR: Unable to run BokehJS code because BokehJS library is missing");
+                    }
+                  }
+                }, 10, root)
+              }
+            })(window);
+          });
+        };
+        if (document.readyState != "loading") fn();
+        else document.addEventListener("DOMContentLoaded", fn);
+      })();
+    </script>
+  </body>
+</html>
