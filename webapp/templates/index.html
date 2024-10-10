@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mental Health Analysis Web App</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/style.css?v=6">
-    <style>
+
+    <!-- Link to the external CSS file using Flask's url_for function -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('statics', filename='css/style.css') }}">
+   
+   <style>
         /* Inline styles to create a simple landing page */
         .landing-page {
-            background-image: url("{{ url_for('static', filename='images/mental_health.jpeg') }}");
+            background-image: url("{{ url_for('statics', filename='images/mental_health.jpeg') }}");
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -31,6 +37,16 @@
         }
         .landing-page button:hover {
             background-color: #0056b3;
+        }
+         /* Footer styles */
+         footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #ffffff;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>

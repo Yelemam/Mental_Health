@@ -5,12 +5,14 @@ import plotly.express as px
 import os
 
 # Initialize Flask application
-app = Flask(__name__)
+#app = Flask(__name__)
+app = Flask(__name__, static_url_path='/static', static_folder='static')
 
 # Load the dataset from the data folder
 # This section reads the CSV file and loads it into a DataFrame
 data_file_path = os.path.join(os.path.dirname(__file__), 'data', 'cleaned_mental_health_data.csv')
 data = pd.read_csv(data_file_path)
+
 
 # --------------------------------------
 # Landing Page Route
