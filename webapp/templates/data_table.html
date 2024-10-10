@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Table</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Data Table</h1>
+    <div class="section">
+        <!-- Filter for Data Table -->
+        <form method="POST">
+            <label for="gender_filter">Filter by Gender:</label>
+            <select name="gender_filter" id="gender_filter">
+                <option value="all">All</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+
+            <label for="self_employed_filter">Filter by Self-Employment:</label>
+            <select name="self_employed_filter" id="self_employed_filter">
+                <option value="all">All</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="treatment_filter">Filter by Treatment:</label>
+            <select name="treatment_filter" id="treatment_filter">
+                <option value="all">All</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <button type="submit">Filter</button>
+        </form>
+
+        <div>{{ data|safe }}</div>
+    </div>
+    <a href="/" class="button">Back to Home</a>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Created by: Yara El-Emam, Michael Rhee, Abigail Serpa, Muad Rashid</p>
+    </footer>
+</body>
+</html>

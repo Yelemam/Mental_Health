@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self-Employment Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Self-Employment Analysis</h1>
+    <div class="section">
+        <!-- Filter for Self-Employment Visualization -->
+        <form method="POST">
+            <label for="employment_filter">Filter by Self-Employment Status:</label>
+            <select name="employment_filter" id="employment_filter">
+                <option value="all">All</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            <button type="submit">Filter</button>
+        </form>
+        <div>{{ self_employment_chart|safe }}</div>
+    </div>
+    <a href="/" class="button">Back to Home</a>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>Created by: Yara El-Emam, Michael Rhee, Abigail Serpa, Muad Rashid</p>
+    </footer>
+</body>
+</html>

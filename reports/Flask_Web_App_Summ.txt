@@ -1,0 +1,44 @@
+2. HTML Template Files (Inside the templates Directory)
+
+index.html (Landing Page)
+
+	•	Purpose: Serves as the homepage of the web application with a background image and buttons that link to different sections.
+	•	Key Features:
+	•	Displays a welcome message.
+	•	Includes buttons for navigation to the Data Table, Gender Analysis, and Self-Employment Analysis pages.
+	•	Uses inline CSS to set up a visually appealing landing page with a background image.
+
+data_table.html (Data Table Page)
+
+	•	Purpose: Displays a data table that can be filtered by gender, self-employment status, and treatment status.
+	•	Key Features:
+	•	Contains dropdown menus to allow the user to filter the data dynamically.
+	•	Displays the filtered data in a structured HTML table.
+	•	Includes a ‘Back to Home’ button to return to the landing page.
+
+gender_analysis.html (Gender Analysis Page)
+
+	•	Purpose: Displays a bar chart of respondents by gender with filtering capabilities.
+	•	Key Features:
+	•	Contains a form with a dropdown menu to filter the data by gender.
+	•	Dynamically updates the chart based on the user’s selection.
+	•	Includes a ‘Back to Home’ button for easy navigation.
+
+self_employment_analysis.html (Self-Employment Analysis Page)
+
+	•	Purpose: Visualizes mental health treatment among self-employed individuals.
+	•	Key Features:
+	•	Allows users to filter the chart based on self-employment status.
+	•	Displays the data in a bar chart that shows the number of respondents by treatment status.
+	•	Includes a ‘Back to Home’ button.
+
+3. style.css (CSS File for Styling)
+
+Purpose: Defines the overall styling of the web application to ensure a consistent look and feel across all pages.
+
+Key Elements:
+
+	•	Body and General Styling: Provides a clean layout for the body of the web app, ensuring all elements are aligned properly.
+	•	Section Styling: Styles individual sections of the web app with a modern look, adding padding, margins, and a box-shadow effect.
+	•	Button Styling: Provides styling for buttons, ensuring a consistent design and hover effect.
+	•	Footer Styling: Gives a distinct look to the footer, keeping it fixed at the bottom of each page.
