@@ -19,8 +19,8 @@
 
 # Project Overview
 
-The Mental Health Data Engineering project focuses on analyzing mental health data to uncover trends, correlations, and insights. The objective of this 
-project is to understand mental health patterns and provide a data-driven platform to visualize these findings using interactive web applications.
+TThe Mental Health Data Engineering project focuses on using data engineering techniques to analyze mental health data with the goal of uncovering 
+trends, correlations, and insights. While we work with the data to understand mental health patterns, our primary emphasis is on the data engineering process itself.
 
 # Folder Structure Explanation
 
@@ -34,8 +34,7 @@ project is to understand mental health patterns and provide a data-driven platfo
 
 # Data Sources
 
-    •    Kaggle Dataset: Used for obtaining a variety of mental health data, including surveys and statistical reports.
-    •    CDC Dataset: Provides data on mental health trends and conditions, supporting the analysis of public health statistics.
+    •    Kaggle Dataset: Used for obtaining a variety of mental health data. https://www.kaggle.com/datasets/bhavikjikadara/mental-health-dataset?resource=download
     •    Data was pre-processed to ensure consistency and relevance for the analysis.
 
 # Database Creation Process
@@ -46,7 +45,7 @@ project is to understand mental health patterns and provide a data-driven platfo
 
 # ETL Workflow
 
-    •    Extraction: Data was extracted from various sources, including CSV files from Kaggle and CDC.
+    •    Extraction: Data was extracted from CSV file from Kaggle. https://www.kaggle.com/datasets/bhavikjikadara/mental-health-dataset?resource=download
     •    Transformation: Data cleaning and transformation processes were conducted to handle missing values, normalize formats, and prepare the data for analysis.
     •    Load: The processed data was loaded into a PostgreSQL database, with tables linked by PKs and FKs to support robust data analysis.
     •    Visualization: An ERD (Entity-Relationship Diagram) was created to visually represent the database schema and table relationships.
@@ -61,10 +60,10 @@ project is to understand mental health patterns and provide a data-driven platfo
 
     •    The Flask web application serves as an interactive interface for users to engage with the data.
     •    Features:
-    •    Data Table: Allows users to filter and explore data dynamically.
-    •    Interactive Charts: Displays visualizations of mental health trends, with filtering options for deeper insights.
-    •    Responsive Design: Ensures that the app is accessible across different devices.
-    •    Integration: The web app integrates seamlessly with the database, enabling real-time data interaction and visualization.
+         •    Data Table: Allows users to filter and explore data dynamically.
+         •    Interactive Charts: Displays visualizations of mental health trends, with filtering options for deeper insights.
+         •    Responsive Design: Ensures that the app is accessible across different devices.
+         •    Integration: The web app integrates seamlessly with the database, enabling real-time data interaction and visualization.
 
 # Tools and Technologies
 
@@ -94,10 +93,10 @@ project is to understand mental health patterns and provide a data-driven platfo
 
 # Contributors
 
-    •    Yara El-Emam: Data analysis, ETL processes, web app development.
-    •    Michael Rhee: Database design, Flask integration, data visualization.
-    •    Abigail Serpa: Data cleaning, exploratory data analysis, documentation.
-    •    Muad Rashid: Web app styling, interactive chart creation, troubleshooting.
+    •    Yara El-Emam
+    •    Michael Rhee
+    •    Abigail Serpa
+    •    Muad Rashid
 
 # Acknowledgments
 
