@@ -1,6 +1,8 @@
 # Mental_Health_Project3
 # Mental Health Data Engineering Project
 
+![mental_health_bg](https://github.com/user-attachments/assets/3be7e3c1-3890-4428-a655-3d48fe6a3262)
+
 # Table of Contents
 
     1.    Project Overview
@@ -50,11 +52,19 @@ trends, correlations, and insights. While we work with the data to understand me
     •    Load: The processed data was loaded into a PostgreSQL database, with tables linked by PKs and FKs to support robust data analysis.
     •    Visualization: An ERD (Entity-Relationship Diagram) was created to visually represent the database schema and table relationships.
 
+![ERD](https://github.com/user-attachments/assets/6153ca25-bd94-45f6-9972-4b44cbe4e8df)
+
+
 # Exploratory Data Analysis (EDA)
 
     •    Detailed analysis was performed using Jupyter Notebooks to explore the data and identify key trends.
     •    Visualizations were created to highlight correlations between different variables, such as gender, treatment, and self-employment status.
     •    The EDA provided insights into the factors influencing mental health, guiding the development of targeted visualizations in the web app.
+
+![gender_distribution](https://github.com/user-attachments/assets/1e4d7809-0429-434a-b12c-8d8be800ff81)
+
+![treatment_by_country](https://github.com/user-attachments/assets/fc1e6b8b-d079-4531-b189-762a5f711475)
+
 
 # Flask Web Application
 
@@ -64,6 +74,7 @@ trends, correlations, and insights. While we work with the data to understand me
          •    Interactive Charts: Displays visualizations of mental health trends, with filtering options for deeper insights.
          •    Responsive Design: Ensures that the app is accessible across different devices.
          •    Integration: The web app integrates seamlessly with the database, enabling real-time data interaction and visualization.
+
 
 # Tools and Technologies
 
