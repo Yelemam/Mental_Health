@@ -41,9 +41,45 @@ trends, correlations, and insights. While we work with the data to understand me
 
 # Database Creation Process
 
-    •    The database was initially created using direct imports from Jupyter Notebook 3. The transformed data was loaded directly into the database.
+    •    The database was initially created using direct imports from Jupyter Notebook 3. The transformed data was loaded directly into the database:
+   
+# Database connection setup
+DATABASE_URL = 'postgresql://postgres:postgres@localhost:5432/Mental_Health_P3_db'
+engine = create_engine(DATABASE_URL)
+
+# Function to load data into PostgreSQL
+def load_data_to_postgres(df, table_name):
+    try:
+        df.to_sql(table_name, con=engine, if_exists='replace', index=False)
+        print(f"Data successfully loaded into the '{table_name}' table.")
+    except Exception as e:
+        print(f"An error occurred while loading data into the '{table_name}' table: {e}")
+
+# Load each CSV file into the database
+file_paths = {
+    'gender_self_employment_analysis': '../data/gender_self_employment_analysis_updated.csv',
+    'gender_based_analysis': '../data/gender_based_analysis_updated.csv',
+    'country_based_analysis': '../data/country_based_analysis_updated.csv',
+    'work_related_factors': '../data/work_related_factors.csv',
+    'mental_health_conditions': '../data/mental_health_conditions.csv',
+    'mental_health_survey': '../data/mental_health_survey.csv',
+    'cleaned_mental_health_data': '../data/cleaned_mental_health_data.csv'
+}
+for table_name, file_path in file_paths.items():
+    df = pd.read_csv(file_path)
+    load_data_to_postgres(df, table_name)
+
+    
     •    Following the data import, the database tables were altered to include primary keys (PK) and foreign keys (FK) to establish relationships and enhance data integrity.
+    
+    <img width="1416" alt="AlterTable_Schema_SS" src="https://github.com/user-attachments/assets/6db85c6a-3caf-4bbd-84f9-b65f4786e963">
+
     •    The database design adheres to standard normalization principles, ensuring optimized storage and efficient querying.
+
+<img width="1121" alt="CleanedMentalHeathData_SS" src="https://github.com/user-attachments/assets/bcbc7ada-0cf1-44e9-bf97-136d80500019">
+
+<img width="343" alt="GenderTable_SS" src="https://github.com/user-attachments/assets/ed34a4c4-7a90-4fa6-bd1d-8a7a6e4f635c">
+
 
 # ETL Workflow
 
@@ -74,6 +110,8 @@ trends, correlations, and insights. While we work with the data to understand me
          •    Interactive Charts: Displays visualizations of mental health trends, with filtering options for deeper insights.
          •    Responsive Design: Ensures that the app is accessible across different devices.
          •    Integration: The web app integrates seamlessly with the database, enabling real-time data interaction and visualization.
+
+Cl<img width="1436" alt="webpage_screenshot" src="https://github.com/user-attachments/assets/f2e20b2d-5699-4b08-bcd9-1ffbd2dfc2bd">
 
 
 # Tools and Technologies
