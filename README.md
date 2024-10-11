@@ -5,19 +5,19 @@
 
 # Table of Contents
 
-    1. Project Overview
-    2. Folder Structure Explanation
-    3. Data Sources
-    4. Database Creation Process
-    5. ETL Workflow
-    6. Exploratory Data Analysis (EDA)
-    7. Flask Web Application
-    8. Tools and Technologies
-    9. Challenges and Solutions
-    10. Future Enhancements
-    11. Ethical Considerations
-    12. Contributors
-    13. Acknowledgments
+ 1. Project Overview
+ 2. Folder Structure Explanation
+ 3. Data Sources
+ 4. Database Creation Process
+ 5. ETL Workflow
+ 6. Exploratory Data Analysis (EDA)
+ 7. Flask Web Application
+ 8. Tools and Technologies
+ 9. Challenges and Solutions
+10. Future Enhancements
+11. Ethical Considerations
+12. Contributors
+13. Acknowledgments
 
 # Project Overview
 
@@ -26,13 +26,13 @@ trends, correlations, and insights. While we work with the data to understand me
 
 # Folder Structure Explanation
 
-    •    data/: Contains raw and cleaned datasets used for analysis and visualization.
-    •    database/: Includes the SQL schema and scripts for database creation and management.
-    •    notebooks/: Jupyter Notebooks used for data cleaning, transformation, and exploratory data analysis.
-    •    webapp/: Contains the Flask web application files, including app.py, HTML templates, and static files (CSS, images).
-    •    static/: Sub-directory within webapp that holds static resources like stylesheets and images.
-    •    templates/: Sub-directory within webapp that contains HTML templates for the Flask app.
-    •    README.md: This document provides an overview of the project and its components.
+ • data/: Contains raw and cleaned datasets used for analysis and visualization.
+ • database/: Includes the SQL schema and scripts for database creation and management.
+ • notebooks/: Jupyter Notebooks used for data cleaning, transformation, and exploratory data analysis.
+ • webapp/: Contains the Flask web application files, including app.py, HTML templates, and static files (CSS, images).
+ • static/: Sub-directory within webapp that holds static resources like stylesheets and images.
+ • templates/: Sub-directory within webapp that contains HTML templates for the Flask app.
+ • README.md: This document provides an overview of the project and its components.
 
 # Data Sources
 
@@ -72,7 +72,8 @@ for table_name, file_path in file_paths.items():
     
  • Following the data import, the database tables were altered to include primary keys (PK) and foreign keys (FK) to establish relationships and enhance data integrity.
     
-    <img width="1416" alt="AlterTable_Schema_SS" src="https://github.com/user-attachments/assets/6db85c6a-3caf-4bbd-84f9-b65f4786e963">
+<img width="1416" alt="AlterTable_Schema_SS" src="https://github.com/user-attachments/assets/fc1ca335-69e0-4797-ad83-40ea273faa1d">
+
 
  • The database design adheres to standard normalization principles, ensuring optimized storage and efficient querying.
 
