@@ -1,3 +1,22 @@
+
+1. app.py (Main Flask Application File)
+   Purpose: The app.py file is the main file that runs the Flask web application. It handles routing, data processing, and rendering of HTML templates.
+   Key Components:
+	• App Initialization:
+         from flask import Flask, render_template, request, send_from_directory
+        app = Flask(__name__, static_url_path='/static', static_folder='static')
+  This initializes the Flask app and explicitly sets the static folder to ensure that Flask knows where to find static files (like CSS and images).
+  
+  Routes:
+	• Landing Page Route (/): Displays the landing page with buttons that navigate to different sections of the  app.
+        • Data Table Route (/data): Displays a table of data and allows the user to filter the data by various criteria, such as gender, self-employment, and treatment.
+        • Gender Analysis Route (/gender-analysis): Displays a bar chart of respondents by gender, with a dropdown filter to allow users to view data for specific genders.
+        • Self-Employment Analysis Route (/self-employment-analysis): Displays a bar chart of mental health treatment among self-employed individuals, with a filter for self-employment status.
+	• Custom Static File Serving: Includes a route to serve static files explicitly:
+           @app.route('/static/<path:filename>')
+           def custom_static(filename):
+           return send_from_directory('static', filename)
+
 2. HTML Template Files (Inside the templates Directory)
 
 index.html (Landing Page)
