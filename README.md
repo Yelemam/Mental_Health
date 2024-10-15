@@ -43,11 +43,11 @@ trends, correlations, and insights. While we work with the data to understand me
 
   • The database was initially created using direct imports from Jupyter Notebook 3. The transformed data was loaded directly into the database:
    
- #Database connection setup
+# Database connection setup
 DATABASE_URL = 'postgresql://postgres:postgres@localhost:5432/Mental_Health_P3_db'
 engine = create_engine(DATABASE_URL)
 
- #Function to load data into PostgreSQL
+# Function to load data into PostgreSQL
 def load_data_to_postgres(df, table_name):
     try:
         df.to_sql(table_name, con=engine, if_exists='replace', index=False)
@@ -55,7 +55,7 @@ def load_data_to_postgres(df, table_name):
     except Exception as e:
         print(f"An error occurred while loading data into the '{table_name}' table: {e}")
 
- #Load each CSV file into the database
+# Load each CSV file into the database
 file_paths = {
     'gender_self_employment_analysis': '../data/gender_self_employment_analysis_updated.csv',
     'gender_based_analysis': '../data/gender_based_analysis_updated.csv',
@@ -152,5 +152,4 @@ Cl<img width="1436" alt="webpage_screenshot" src="https://github.com/user-attach
 
   • Instructors and Mentors: Special thanks to our instructors and mentors who provided guidance and valuable feedback throughout the project.
   • Kaggle: For providing access to the dataset used in this analysis, which formed the foundation of our project.
-  • AI Tools and Assistance: We utilized AI tools to assist with debugging, integrating new libraries, and setting up connections between Jupyter Notebook and PostgreSQL, 
-  which greatly enhanced our productivity and problem-solving capabilities.
+  • AI Tools and Assistance: We utilized AI tools to assist with debugging, integrating new libraries, and setting up connections between Jupyter Notebook and PostgreSQL, which greatly enhanced our productivity and problem-solving capabilities.
