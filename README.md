@@ -122,6 +122,8 @@ Cl<img width="1436" alt="webpage_screenshot" src="https://github.com/user-attach
   • Flask: Web framework used to create the interactive web application.
   • Plotly: Library used for creating dynamic charts and visualizations.
   • SQLAlchemy: For database operations and handling queries in the web app.
+  • Bokeh: Library uses a concept called ColumnDataSource to manage and transfer data between Python and the visualization
+  
 
 # Challenges and Solutions
 
