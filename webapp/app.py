@@ -1,5 +1,5 @@
 # Import necessary libraries
-from flask import Flask, render_template, request, send_from_directory
+from flask import Flask, render_template, request, send_from_directory , jsonify
 import pandas as pd
 import plotly.express as px
 import os
@@ -84,6 +84,22 @@ def self_employment_analysis():
     self_employment_chart_html = self_employment_chart.to_html(full_html=False)
     
     return render_template('self_employment_analysis.html', self_employment_chart=self_employment_chart_html)
+
+# --------------------------------------
+# NEW: API Route for Gender Analysis as JSON
+@app.route('/api/gender-analysis', methods=['GET'])
+def api_gender_analysis():
+    gender_counts = data['Gender'].value_counts().reset_index()
+    gender_counts.columns = ['Gender', 'Count']
+    return jsonify(gender_counts.to_dict(orient='records'))
+
+# --------------------------------------
+# NEW: API Route for Self-Employment Analysis as JSON
+@app.route('/api/self-employment-analysis', methods=['GET'])
+def api_self_employment_analysis():
+    self_employment_counts = data.groupby(['self_employed', 'treatment']).size().reset_index(name='Count')
+    return jsonify(self_employment_counts.to_dict(orient='records'))
+
 # --------------------------------------
 # Run the Flask Application
 # Starts the Flask web server with debug mode enabled
