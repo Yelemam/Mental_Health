@@ -1,5 +1,5 @@
 # Import necessary libraries
-from flask import Flask, render_template, request, send_from_directory , jsonify
+from flask import Flask, render_template, request, jsonify
 import pandas as pd
 import plotly.express as px
 import os
