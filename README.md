@@ -21,7 +21,7 @@
 
 # Project Overview
 
-TThe Mental Health Data Engineering project focuses on using data engineering techniques to analyze mental health data with the goal of uncovering 
+The Mental Health Data Engineering project focuses on using data engineering techniques to analyze mental health data with the goal of uncovering 
 trends, correlations, and insights. While we work with the data to understand mental health patterns, our primary emphasis is on the data engineering process itself.
 
 # Folder Structure Explanation
